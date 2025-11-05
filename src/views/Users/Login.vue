@@ -20,6 +20,7 @@
 
 <script>
 import axios from 'axios';
+import { isLoggedIn } from '../../router/index.js';
 export default {
   name: 'LoginView',
   data() {
@@ -44,7 +45,12 @@ export default {
           }
         );
         if (response.status === 200) {
-           this.$router.push('/cars');
+          const token = response.data.token;
+          if (token) {
+            localStorage.setItem('authToken', token);
+            isLoggedIn.value = true;
+          }
+          this.$router.push('/cars');
         }
       } catch (error) {
         this.error = error.response?.data?.message || 'Login failed';

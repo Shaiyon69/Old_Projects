@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import { ref } from 'vue'
 import HomeView from '../views/HomeView.vue'
 
-const isLoggedIn = ref(false)
+export const isLoggedIn = ref(false)
 
 const routes = [
   {
