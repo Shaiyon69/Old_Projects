@@ -1,6 +1,6 @@
 <template>
-  <div >
-    <!-- <h1 class="mb-4">Cars List</h1> -->
+  <div class="container mt-4">
+    <h1 class="mb-4">Cars List</h1>
     <table class="table table-striped table-hover">
       <thead class="table-dark">
         <tr>

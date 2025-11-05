@@ -1,5 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import { ref } from 'vue'
 import HomeView from '../views/HomeView.vue'
+
+const isLoggedIn = ref(false)
 
 const routes = [
   {
@@ -30,6 +33,18 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
+})
+
+router.beforeEach((to, from, next) => {
+  if ((to.path === '/users/login' || to.path === '/login') && isLoggedIn.value) {
+    next('/cars')
+  }
+  else if ((to.path === '/cars') && !isLoggedIn.value) {
+    next('/users/login')
+  } else {
+    next()
+  }
+
 })
 
 export default router
