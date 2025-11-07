@@ -113,7 +113,6 @@ class _RegisterState extends State<Register> {
                   labelText: "Program",
                   border: OutlineInputBorder(),
                 ),
-                obscureText: true,
               ),
               const SizedBox(height: 20),
               ElevatedButton(
