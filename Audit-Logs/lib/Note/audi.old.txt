@@ -1,0 +1,29 @@
+class Audit {
+  int? user_id;
+  String? activity_logs;
+  String? action;
+
+  Audit({
+    this.user_id,
+    this.activity_logs,
+    this.action
+  });
+
+  factory Audit.fromJson(Map<String, dynamic> json) {
+    return Audit(
+      user_id: json['user_id'] != null
+          ? int.tryParse(json['id'].toString())
+          : null,
+      activity_logs: json['activity_logs']?.toString(),
+      action: json['action']?.toString(),
+    );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'user_id': user_id?.toString() ?? '',
+      'activity_logs': activity_logs?.toString() ?? '',
+      'action': action
+    };
+  }
+}
