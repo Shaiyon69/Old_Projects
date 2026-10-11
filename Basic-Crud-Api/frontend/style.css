@@ -1,0 +1,29 @@
+body {
+    font-family: sans-serif;
+    padding: 20px;
+    color: white;
+    background-color: black;
+}
+
+form input,
+form button {
+    margin-right: 10px;
+    padding: 5px;
+}
+
+table {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid #000000;
+}
+
+button.delete {
+    color: red;
+    cursor: pointer;
+}

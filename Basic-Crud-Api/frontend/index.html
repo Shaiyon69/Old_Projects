@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Device Manager</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <h1>Device List</h1>
+
+    <form id="deviceForm">
+        <input type="text" id="name" placeholder="Name" required />
+        <input type="text" id="type" placeholder="Type" required />
+        <input type="number" id="price" placeholder="Price" required />
+        <button type="submit">Add Device</button>
+    </form>
+
+    <table id="deviceTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
