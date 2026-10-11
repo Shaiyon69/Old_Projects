@@ -1,0 +1,2 @@
+- [x] Add HasApiTokens trait to User model
+- [x] Add sanctum guard to auth config and set as default
